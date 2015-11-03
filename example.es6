@@ -2,6 +2,9 @@ import React from 'react';
 import Button from './index';
 
 export default (
-  <Button>Load more</Button>
+  <div>
+    <p><Button>Load more</Button></p>
+    <p><Button disabled>I am disabled</Button></p>
+  </div>
 );
 
