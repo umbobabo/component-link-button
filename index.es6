@@ -20,6 +20,7 @@ export default function Button (props) {
 }
 
 Button.propTypes = {
+  href: React.PropTypes.string.isRequired,
   className: React.PropTypes.string,
   children: React.PropTypes.oneOfType([
     React.PropTypes.string,
