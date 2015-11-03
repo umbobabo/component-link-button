@@ -1,11 +1,15 @@
 import React from 'react';
 
+const defaultPreventer = (ev) => {
+  ev.preventDefault()
+};
+
 const Button = (props) => {
   const { className, children, disabled } = props;
   const extraClassNames = className ? className.split(/\s+/g) : [];
   let onClick = props.onClick;
   if (disabled === true) {
-    onClick = null;
+    onClick = defaultPreventer;
     extraClassNames.push('link-button--disabled');
   }
   return (
