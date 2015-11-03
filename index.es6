@@ -19,5 +19,16 @@ const Button = (props) => {
   );
 }
 
+Button.propTypes = {
+  className: React.PropTypes.string,
+  children: React.PropTypes.oneOfType([
+    React.PropTypes.string,
+    React.PropTypes.element,
+    React.PropTypes.array,
+  ]),
+  onClick: React.PropTypes.func,
+  disabled: React.PropTypes.bool,
+}
+
 export default Button;
 
