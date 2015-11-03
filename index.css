@@ -1,0 +1,20 @@
+@import "@economist/component-typography";
+@import "@economist/component-palette";
+@import "@economist/component-grid";
+
+.link-button {
+  display: inline-block;
+
+  font-family: var(--fontfamily-body);
+  font-size: var(--text-size-step--1);
+  line-height: var(--text-line-height-body-on-step--1);
+
+  padding: var(--grid-spacing-rabbit) var(--grid-gutter-xl);
+  background-color: var(--color-honolulu);
+  color: var(--color-thimphu);
+  border-radius: .3em;
+
+  cursor: pointer;
+  user-select: none;
+}
+
