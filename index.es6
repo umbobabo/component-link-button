@@ -4,7 +4,7 @@ const defaultPreventer = (ev) => {
   ev.preventDefault()
 };
 
-const Button = (props) => {
+export default function Button (props) {
   const { className, children, disabled } = props;
   const extraClassNames = className ? className.split(/\s+/g) : [];
   let onClick = props.onClick;
@@ -29,6 +29,4 @@ Button.propTypes = {
   onClick: React.PropTypes.func,
   disabled: React.PropTypes.bool,
 }
-
-export default Button;
 
