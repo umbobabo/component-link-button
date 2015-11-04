@@ -22,11 +22,7 @@ export default function Button (props) {
 Button.propTypes = {
   href: React.PropTypes.string.isRequired,
   className: React.PropTypes.string,
-  children: React.PropTypes.oneOfType([
-    React.PropTypes.string,
-    React.PropTypes.element,
-    React.PropTypes.array,
-  ]),
+  children: React.PropTypes.node,
   onClick: React.PropTypes.func,
   disabled: React.PropTypes.bool,
 }
