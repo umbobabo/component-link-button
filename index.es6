@@ -1,19 +1,23 @@
 import React from 'react';
 
 const defaultPreventer = (ev) => {
-  ev.preventDefault()
+  ev.preventDefault();
 };
-
-export default function Button (props) {
-  const { className, children, disabled } = props;
+export default function Button(props) {
+  const { className, children, disabled, shadow } = props;
   const extraClassNames = className ? className.split(/\s+/g) : [];
   let onClick = props.onClick;
   if (disabled === true) {
     onClick = defaultPreventer;
     extraClassNames.push('link-button--disabled');
   }
+  if (shadow === true) {
+    extraClassNames.push('link-button--shadow');
+  }
   return (
-    <a role="button" {...props} onClick={onClick} className={['link-button'].concat(extraClassNames).join(' ')}>
+    <a role="button" {...props} onClick={onClick}
+      className={[ 'link-button' ].concat(extraClassNames).join(' ')}
+    >
       {children}
     </a>
   );
@@ -25,5 +29,5 @@ Button.propTypes = {
   children: React.PropTypes.node,
   onClick: React.PropTypes.func,
   disabled: React.PropTypes.bool,
-}
-
+  shadow: React.PropTypes.bool,
+};
