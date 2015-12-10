@@ -10,7 +10,7 @@ describe('Button', () => {
     }, {});
 
     comp.props.children.should.equal('have some text');
-    comp.props.className.should.equal('link-button');
+    comp.props.className.should.equal('link-button link-button--styled');
   });
   it('Can add more classNames and extra props', () => {
     const comp = new Button({
@@ -21,7 +21,7 @@ describe('Button', () => {
 
     function dummy(){}  // <- Great album
 
-    comp.props.className.should.equal('link-button testing');
+    comp.props.className.should.equal('link-button testing link-button--styled');
     comp.props.href.should.equal('http://example.com/');
     comp.props.onClick.should.equal(dummy);
   });

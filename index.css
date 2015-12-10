@@ -2,19 +2,16 @@
 @import "@economist/component-palette";
 @import "@economist/component-grid";
 
-.link-button {
+.link-button--styled {
   display: inline-block;
-
   font-family: var(--fontfamily-body);
   font-size: var(--text-size-step--1);
   line-height: var(--text-line-height-body-on-step--1);
   text-decoration: none;
-
   padding: var(--grid-spacing-rabbit) var(--grid-gutter-xl);
   background-color: var(--color-honolulu);
   color: var(--color-thimphu);
   border-radius: .3em;
-
   cursor: pointer;
   user-select: none;
 }
@@ -26,4 +23,12 @@
 
 .link-button--shadow {
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+}
+
+.link-button--icon {
+  display: inline-flex;
+}
+
+.link-button--icon .link-button__text {
+  align-self: center;
 }
