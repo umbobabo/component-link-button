@@ -6,7 +6,8 @@ import React from 'react';
 describe('Button', () => {
   it('renders a link-button with a default classname and text', () => {
     const comp = new Button({
-      children: 'have some text'
+      children: 'have some text',
+      href: 'http://www.economist.com',
     }, {});
 
     comp.props.children.should.equal('have some text');
