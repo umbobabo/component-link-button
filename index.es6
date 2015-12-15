@@ -23,7 +23,12 @@ export default function Button(props) {
 
   if (icon) {
     extraClassNames.push('link-button--icon');
-    content = [ (<Icon {...icon} key="link-button__icon" />), (<span className="link-button__text" key="link-button__text">{content}</span>) ];
+    content = (
+      <span className="link-button__group">
+        <Icon {...icon} key="link-button__icon" />
+        <span className="link-button__text" key="link-button__text">{content}</span>
+      </span>
+    );
     // We don't want this prop spreaded on <a> tag.
     delete linkProps.icon;
   }
