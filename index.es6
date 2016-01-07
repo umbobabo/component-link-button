@@ -23,12 +23,24 @@ export default function Button(props) {
 
   if (icon) {
     extraClassNames.push('link-button--icon');
-    content = (
-      <span className="link-button__group">
-        <Icon {...icon} key="link-button__icon" />
-        <span className="link-button__text" key="link-button__text">{content}</span>
-      </span>
-    );
+    extraClassNames.push(`link-button-icon--${icon.icon}`);
+    if (icon.className) {
+      extraClassNames.push(icon.className);
+    }
+    if (icon.color) {
+      extraClassNames.push(`icon--${icon.icon}-${icon.color}`);
+    }
+    if (!icon.useBackground) {
+      content = (
+        <span className="link-button__group">
+          <Icon {...icon} key="link-button__icon" />
+          <span className="link-button__text" key="link-button__text">{content}</span>
+        </span>
+      );
+    } else {
+      extraClassNames.push('link-button--icon-background');
+      linkProps.style = { backgroundRepeat: 'no-repeat' };
+    }
     // We don't want this prop spreaded on <a> tag.
     delete linkProps.icon;
   }

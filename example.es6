@@ -14,10 +14,21 @@ export default (
       </Button>
     </p>
     <p>
-      <Button unstyled icon={{ icon: 'facebook', size: '28px' }}
+      <Button unstyled icon={{
+        icon: 'video' }}
         href="http://www.economist.com"
       >
         Unstyled with icon
+      </Button>
+    </p>
+    <p>
+      <Button icon={{
+        icon: 'video',
+        color: 'honolulu',
+        'useBackground': true }}
+        href="http://www.economist.com"
+      >
+        Use icon as background
       </Button>
     </p>
     <p>
