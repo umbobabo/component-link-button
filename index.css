@@ -28,3 +28,7 @@
 .link-button__group svg {
   vertical-align: bottom;
 }
+
+.link-button__icon {
+  vertical-align: middle;
+}
