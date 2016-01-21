@@ -4,7 +4,7 @@
 
 .link-button--styled {
   display: inline-block;
-  font-family: var(--fontfamily-body);
+  font-family: var(--fontfamily-sans);
   font-size: var(--text-size-step--1);
   line-height: var(--text-line-height-body-on-step--1);
   text-decoration: none;
