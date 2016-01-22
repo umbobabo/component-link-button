@@ -6,7 +6,7 @@
   display: inline-block;
   font-family: var(--fontfamily-sans);
   font-size: var(--text-size-step--1);
-  line-height: var(--text-line-height-body-on-step--1);
+  line-height: var(--text-line-height-sans-on-step--1);
   text-decoration: none;
   padding: var(--grid-spacing-rabbit) var(--grid-gutter-xl);
   background-color: var(--color-honolulu);
