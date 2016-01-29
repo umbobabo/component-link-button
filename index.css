@@ -9,15 +9,15 @@
   line-height: var(--text-line-height-sans-on-step--1);
   text-decoration: none;
   padding: var(--grid-spacing-rabbit) var(--grid-gutter-xl);
-  background-color: var(--color-honolulu);
-  color: var(--color-thimphu);
+  background-color: var(--link-button--styled-background, var(--color-chicago));
+  color: var(--link-button--styled-color, var(--color-thimphu));
   border-radius: .3em;
   cursor: pointer;
   user-select: none;
 }
 
 .link-button--disabled {
-  background-color: var(--color-london);
+  background-color: var(--link-button--disabled-background, var(--color-london));
   cursor: default;
 }
 
