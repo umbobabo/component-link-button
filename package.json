@@ -1,6 +1,6 @@
 {
   "name": "@economist/component-link-button",
-  "version": "2.1.0",
+  "version": "1.5.0",
   "description": "A component that displays a button that is also a link.",
   "author": "The Economist (http://economist.com)",
   "license": "ISC",
