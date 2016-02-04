@@ -34,8 +34,12 @@ export default (
     <p>
       <Button icon={{ icon: 'facebook', size: '56px', rounded: true }}
         href="http://www.economist.com"
+        i13nModel={{
+          action: 'click',
+          element: 'facebook link',
+        }}
       >
-        I have an bigger icon
+        I have an bigger icon and I'm tracked
       </Button>
     </p>
   </div>

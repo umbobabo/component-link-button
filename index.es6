@@ -1,11 +1,14 @@
 import React from 'react';
 import Icon from '@economist/component-icon';
+/* eslint-disable id-match */
+/* eslint-disable  react/display-name */
+import { createI13nNode } from 'react-i13n';
 
 const defaultPreventer = (ev) => {
   ev.preventDefault();
 };
 export default function Button(props) {
-  const { className, children, disabled, shadow, icon, unstyled } = props;
+  const { className, children, disabled, shadow, icon, unstyled, i13nModel } = props;
   const extraClassNames = className ? className.split(/\s+/g) : [];
   let onClick = props.onClick;
   if (!unstyled) {
@@ -44,13 +47,29 @@ export default function Button(props) {
     // We don't want this prop spreaded on <a> tag.
     delete linkProps.icon;
   }
-  return (
-    <a role="button" {...linkProps} onClick={onClick}
-      className={[ 'link-button' ].concat(extraClassNames).join(' ')}
-    >
+
+  linkProps.role = "button";
+  linkProps.onClick = onClick;
+  linkProps.className= [ 'link-button' ].concat(extraClassNames).join(' ');
+
+  if (props.i13nModel) {
+    const I13nLink = createI13nNode('a', {
+      isLeafNode: true,
+      bindClickEvent: true,
+      follow: true,
+    });
+    return (
+      <I13nLink {...linkProps}>
+        {content}
+      </I13nLink>
+    );
+  } else {
+    return (
+      <a {...linkProps}>
       {content}
-    </a>
-  );
+      </a>
+    );
+  }
 }
 
 Button.propTypes = {
@@ -62,4 +81,5 @@ Button.propTypes = {
   shadow: React.PropTypes.bool,
   unstyled: React.PropTypes.bool,
   icon: React.PropTypes.object,
+  i13nModel: React.PropTypes.object,
 };
