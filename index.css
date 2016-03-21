@@ -1,12 +1,11 @@
-@import "@economist/component-typography";
 @import "@economist/component-palette";
 @import "@economist/component-grid";
 
 .link-button--styled {
   display: inline-block;
-  font-family: var(--fontfamily-sans);
-  font-size: var(--text-size-step--1);
-  line-height: var(--text-line-height-sans-on-step--1);
+  font-family: var(--link-button--styled-fontFamily, 'EconSans', Tahoma, sans-serif);
+  font-size: var(--link-button--styled-fontSize, 0.8em);
+  line-height: var(--link-button--styled-lineHeight, 1.4);
   text-decoration: none;
   padding: var(--grid-spacing-rabbit) var(--grid-gutter-xl);
   background-color: var(--link-button--styled-background, var(--color-chicago));
